@@ -11,15 +11,12 @@ end
 #SHOW (GET)
 
 get '/users/:id/?' do
-
    @user = User.find(params[:id])
-
    if current_user == @user
       redirect "/users/#{@user.id}"
    else
       redirect "/"
    end
-
 end
 
 #CREATE (POST)

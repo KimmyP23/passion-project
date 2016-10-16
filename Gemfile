@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'unicorn'
 
+gem 'dotenv'
+
 # PostgreSQL driver
 gem 'pg'
 

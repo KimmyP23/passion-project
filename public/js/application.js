@@ -6,40 +6,8 @@ $( document ).ready( function () {
    headerFormSubmitListener( "#register_new_user_form" );
    headerFormSubmitListener( "#login_user_form" );
    headerFormSubmitListener( "#logout_user_form" );
-   doSomeCrazyStuff();
 });
 
-var generateRandomColor = function () {
-   var num = Math.floor((Math.random() * 4) + 0);
-
-   switch ( num ) {
-      case 0:
-         return "green"
-         break;
-      case 1:
-         return "red"
-         break;
-      case 2:
-         return "pink"
-         break;
-      case 3:
-         return "orange"
-         break;
-      case 4:
-         return "blue"
-         break;
-      default:
-         return "blue"
-   }
-}
-
-var doSomeCrazyStuff = function() {
-   $( "div" ).on( "mouseover", "h1", function( event ) {
-      event.preventDefault();
-      var targetElement = $( this );
-      targetElement.css('color', generateRandomColor());
-   });
-};
 
 var setupHeaderForm = function( response ) {
    var targetParentListener = $ ( "#header_login_register_div" );
