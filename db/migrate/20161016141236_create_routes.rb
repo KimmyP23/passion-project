@@ -4,10 +4,9 @@ class CreateRoutes < ActiveRecord::Migration
       t.string :name
       t.string :origin 
       t.string :destination
-      # t.string :duration_text
-      # t.integer :duration_value
-      # t.string :distance_text
-      # t.integer :distance_value 
+      t.string :distance
+      t.string :time
+      t.string :comments
 
       t.timestamps
   end

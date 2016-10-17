@@ -1,4 +1,3 @@
-#NEW
 
 get '/sessions/login/?' do
    erb :'sessions/_login.html', layout: !request.xhr?
@@ -27,3 +26,4 @@ delete '/sessions/logout/?' do
    session[:id] = nil
    erb :'/headers/_header_links.html', layout: !request.xhr?
 end
+
