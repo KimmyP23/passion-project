@@ -15,8 +15,12 @@ html {
 h1 {
 	height: 10%;
 	width: 10%;
-	font-family: 'Pacifico', cursive;
-	color: red;
+  color: red;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+  font-family: 'Pacifico', cursive;
+
 /*	background-image: url("http://www.myotonic.org/sites/default/files/field-events/node/1116/edit/2013%2BSan%2BFrancisco%2BMarathon%2BM2iZUWyIItHl.jpg");
   background-repeat: no-repeat;*/
 }
@@ -100,3 +104,29 @@ body {
     width: auto;
   }
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: red;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #42f4df;
+}
+
+

@@ -1,61 +1,34 @@
-# diplay all routes to users
-
-get '/user/:user_id/routes' do 
-  @user = User.find(params[:user_id])
-  @routes = @user.routes
-  erb :'routes/index'
-end
 
 # Display new route form
-get '/user/:user_id/routes/new' do 
-  @user = User.find(params[:user_id])
-  erb :'routes/new'
+get '/routes/new' do
+  if logged_in? 
+    erb :'routes/new'
+  else
+    redirect '/'
+  end
 end
 
 #Save Route to User 
-post '/user/:user_id/routes' do 
-  @user = User.find(params[:user_id])
-  @route = @user.routes.new(params[:route])
+post '/routes' do 
+  @route = Route.new(params[:route])
+  @route.user_id = current_user.id
   if @route.save
-    redirect "/user/#{@user.id}/routes"
+    redirect "/"
   else
     erb :'routes/new' 
   end
 end
 
 # Select a particular route to display
-get '/user/:user_id/routes/:id' do 
-  @user = User.find(params[:user_id])
-  @route = @user.routes.find(params[:id])
+get '/routes/:id' do 
+  @route = Route.find(params[:id])
   erb :'routes/show'
 end
 
-# # Display form to edit
-# get '/user/:user_id/routes/:id/edit' do
-#   @user = User.find(params[:user_id])
-#   @route = @user.routes.find(params[:id])
-#   erb :'routes/edit'
-# end
 
-# # Update route
-# put '/user/:user_id/routes/:id' do
-#   @user = User.find(params[:user_id])
-#   @route = @user.routes.find(params[:id])
-
-#   if @route.update_attributes(params[:route])
-#     redirect "/user/#{@user.id}/routes"
-#   else 
-#     erb :'routes/edit' #show edit routes view again(potentially displaying errors)
-#   end
-# end
-
-
-# Delete user route
-delete '/user/:user_id/routes/:id' do 
-  @user = User.find(params[:user_id])
-  @route = @user.routes.find(params[:id])
-  @route.destroy
-  redirect "/user/#{@user.id}/routes"
+delete '/routes/:id' do
+  unwanted_route = Route.find(params[:id])
+  unwanted_route.delete
+  redirect '/'
 end
-
-
+  

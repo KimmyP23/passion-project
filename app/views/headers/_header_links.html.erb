@@ -4,8 +4,18 @@
       <input type="hidden" name="_method" value="DELETE">
       <input type="submit" value="Logout">
    </form>
+
+   <a href="/routes/new">Add a new route!</a>
+
+   <a href="/logout">Log out</a>
+
+   <!-- need to add profile page!!!! -->
 <% else %>
-   <a class="register_link" href="/users/new">REGISTER</a>
-   <br/>
-   <a class="login_link" href="/sessions/login">LOG IN</a>      
+<ul>
+	<li><a class="register_link" href="/users/new">REGISTER</a></li>
+	<li><a class="login_link" href="/sessions/login">LOG IN</a></li>
+	<li><a href="http://www.thesfmarathon.com/the-races/full-marathon/">SIGN UP FOR 2107 MARATHON</a></li>
+</ul>
 <% end %>
+
+

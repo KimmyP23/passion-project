@@ -7,6 +7,7 @@ class CreateRoutes < ActiveRecord::Migration
       t.string :distance
       t.string :time
       t.string :comments
+      t.string :user_id
 
       t.timestamps
   end

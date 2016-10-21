@@ -4,19 +4,21 @@
 
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
+  <!-- <link type="text/css" rel="stylesheet" href="clock_assets/flipclock.css" /> -->
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
+  <!-- <script type="text/javascript" src="clock_assets/flipclock.js"></script> -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLkq5yhAePIe4p7BfQ85iNF0r4UuQLBis&callback=initMap">
 </script>
 
   <title>TrainSF</title>
 
  <header >
+ 		<h1>TrainSF</h1>
    <%= erb :"/headers/_header.html" %>
 </header>
 <body>
-<h1>TrainSF</h1>
   <%= yield %>
 </body>
 </html>
