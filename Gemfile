@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 # PostgreSQL driver
+gem 'unicorn'
 gem 'pg'
 
 # Sinatra driver
