@@ -155,8 +155,10 @@ input[type=button], input[type=submit], input[type=reset] {
     cursor: pointer;
 }
 
-form {
+/*form {
   border-left-color: red;
-}
+}*/
+
+
 
 
