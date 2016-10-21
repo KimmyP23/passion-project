@@ -51,4 +51,21 @@ San Francisco, CA">Crissy Field</option>
 <div id="map"></div>
 </div>
 
+<form id="new-route-form" action="/routes" method="post" class="form">
+  <label for="route[name]" class="label">Name:</label>
+  <input type="text" name="route[name]" placeholder="Route Name">
+  <label for="route[origin]" class="label">Start:</label>
+  <input type="text" name="route[origin]" placeholder="Start">
+  <label for="route[destination]" class="label">Destination</label>
+  <input type="text" name="route[destination]" placeholder="Destination">
+  <label for="route[distance]" class="label">Distance:</label>
+  <input type="text" name="route[distance]" placeholder="Distance">
+  <label for="route[time]" class="label">Time:</label>
+  <input type="text" name="route[time]" placeholder="Time">
+  <label for="route[comment]" class="label">Comments:</label>
+  <textarea name="route[comment]" class="textarea input input-round"></textarea>
+
+  <input type="submit" name="submit" value="Add Route" class="input button button-coral">
+</form>
+
 

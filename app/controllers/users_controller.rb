@@ -15,7 +15,6 @@ get '/users/:id/?' do
    end
 end
 
-
 post '/users/?' do   
    if params[:password_confirmation] == params[:user][:password]
       @user = User.new(params[:user])
