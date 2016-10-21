@@ -11,7 +11,7 @@
 	<% else %>
 		<ul class="list">
 	 	 	<% @user.routes.each do |route| %>
-	 			<li><a href="/routes/<%=route.id%>"><%= route.name %></a></li>
+	 			<li class ="run-route"><a href="/routes/<%=route.id%>"><%= route.name %></a></li>
 	 	 	<%end%>
 	 	</ul>
 	<% end %>
