@@ -20,6 +20,7 @@ h1 {
   font-size: 40px;
   margin: 40px 0px 20px;
   font-family: 'Pacifico', cursive;
+  text-align: center;
 }
 
 html,
@@ -155,7 +156,7 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 
 form {
-  border
+  border-left-color: red;
 }
 
 
