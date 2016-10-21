@@ -20,9 +20,6 @@ h1 {
   font-size: 40px;
   margin: 40px 0px 20px;
   font-family: 'Pacifico', cursive;
-
-/*	background-image: url("http://www.myotonic.org/sites/default/files/field-events/node/1116/edit/2013%2BSan%2BFrancisco%2BMarathon%2BM2iZUWyIItHl.jpg");
-  background-repeat: no-repeat;*/
 }
 
 html,
@@ -91,7 +88,7 @@ body {
   font-family: Arial;
   border: 1px solid #ccc;
   box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
-  display: none;
+  display: block;
 }
 
 @media print {
@@ -127,6 +124,38 @@ li a {
 
 li a:hover {
     background-color: #42f4df;
+}
+
+input[type=text] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 60%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+form {
+  border
 }
 
 

@@ -110,5 +110,6 @@ function displayRoute() {
          listItem.append(routeData);
        });
   });
+}
 
 

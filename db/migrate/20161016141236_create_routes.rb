@@ -10,5 +10,6 @@ class CreateRoutes < ActiveRecord::Migration
       t.string :user_id
 
       t.timestamps
+    end
   end
 end
