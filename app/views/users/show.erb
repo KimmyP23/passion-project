@@ -4,6 +4,9 @@
 	<% if @user.routes.empty?%>
 		<h2>Routes:</h2>
 		<p>No routes added</p>
+		<form class="flex flex-column" method="GET" action="/routes/new">
+  		<button type="submit" class="button dark">Add Route</button>
+		</form>
 
 	<% else %>
 		<ul class="list">
