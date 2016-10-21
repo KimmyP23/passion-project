@@ -1,9 +1,27 @@
 <div>
-<p><%= @route.origin%></p>
+<table>
+	<tr>
+		<th>Origin</th>
+		<th>Desination</th>
+		<th>Distance</th>
+		<th>Time</th>
+		<th>Commets</th>
+	</tr>
+	<tr>
+		<td><%= @route.origin%></td>
+		<td><%= @route.destination%></td>
+		<td><%= @route.distance%></td>
+		<td><%= @route.time%></td>
+		<td><%= @route.comment%></td>
+	</tr>
+</table>
+
+
+<!-- <p><%= @route.origin%></p>
 <p><%= @route.destination%></p>
 <p><%= @route.distance%></p>
 <p><%= @route.time%></p>
-<p><%= @route.comment%></p>
+<p><%= @route.comment%></p> -->
 
  <form action="/routes/<%= @route.id %>" method="POST">
  	<input type="hidden" name="_method" value="delete">
