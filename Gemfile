@@ -1,27 +1,23 @@
 source 'https://rubygems.org'
 
-gem 'unicorn'
-
-gem 'dotenv'
-
 # PostgreSQL driver
 gem 'pg'
 
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem "sinatra-cross_origin", "~> 0.3.1"
 
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
 
 gem 'rake'
 
-gem 'shotgun'
-
-gem 'haml'
-
 gem 'bcrypt'
+gem 'shotgun'
+gem 'pry'
+gem 'awesome_print'
+
+gem 'faker'
 
 group :test do
   gem 'shoulda-matchers'
@@ -32,5 +28,9 @@ end
 
 group :test, :development do
   gem 'factory_girl'
-  gem 'faker'
+end
+
+group :api_helpers do
+  gem 'httparty'
+  gem 'dotenv'
 end
