@@ -1,15 +1,12 @@
-get '/users/?' do
-   redirect "/"
-end
-
 get '/users/new/?' do
    erb :'/users/_new.html', layout: !request.xhr?
 end
 
 get '/users/:id/?' do
    @user = User.find(params[:id])
+   
    if current_user == @user
-      redirect "/users/#{@user.id}"
+      erb :'users/show'
    else
       redirect "/"
    end
@@ -21,7 +18,7 @@ post '/users/?' do
 
       if @user.save
          session[:id] = @user.id
-         erb :'/headers/_header_links.html', layout: !request.xhr?
+         redirect '/'
       else
          @errors = @user.errors.full_messages
          erb :'/users/_new.html', layout: !request.xhr?

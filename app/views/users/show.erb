@@ -1,0 +1,14 @@
+<div>
+	<h1> <%=@user.username %></h1>
+
+	<% if @user.routes.empty?%>
+		<h2>Routes:</h2>
+		<p>No routes added</p>
+
+	<% else %>
+		<ul>
+	 	 	<% @user.routes.each do |route| %>
+	 			<li><a href="/routes/<%=route.id%>"><%= route.name %></a></li>
+	 	 	<%end%>
+	 	</ul>
+</div>

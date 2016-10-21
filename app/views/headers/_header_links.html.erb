@@ -1,21 +1,15 @@
 <% if logged_in? %>
-   <span><%= current_user.username %></span>
-   <form id="logout_user_form" action="/sessions/logout" method="POST">
-      <input type="hidden" name="_method" value="DELETE">
-      <input type="submit" value="Logout">
-   </form>
-
-   <a href="/routes/new">Add a new route!</a>
-
-   <a href="/logout">Log out</a>
-
-   <!-- need to add profile page!!!! -->
+   <ul>
+      <li><a href="/users/<%= current_user.id%>"><%=current_user.username.upcase%></a></li>
+      <li><a href="/routes/new">ADD ROUTE</a></li>
+      <li><a href="/logout">LOGOUT</a></li>
+   </ul>
 <% else %>
-<ul>
-	<li><a class="register_link" href="/users/new">REGISTER</a></li>
-	<li><a class="login_link" href="/sessions/login">LOG IN</a></li>
-	<li><a href="http://www.thesfmarathon.com/the-races/full-marathon/">SIGN UP FOR 2107 MARATHON</a></li>
-</ul>
+   <ul>
+   	<li><a class="register_link" href="/users/new">REGISTER</a></li>
+   	<li><a class="login_link" href="/sessions/login">LOG IN</a></li>
+   	<li><a href="http://www.thesfmarathon.com/the-races/full-marathon/">SIGN UP FOR 2107 MARATHON</a></li>
+   </ul>
 <% end %>
 
 
