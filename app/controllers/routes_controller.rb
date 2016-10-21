@@ -2,7 +2,7 @@
 # Display new route form
 get '/routes/new' do
   if logged_in? 
-    erb :'routes/new'
+      erb :'routes/new'
   else
     redirect '/'
   end
@@ -22,7 +22,11 @@ end
 # Select a particular route to display
 get '/routes/:id' do 
   @route = Route.find(params[:id])
-  erb :'routes/show'
+  if request.xhr?
+    erb :"/partials/_routeshow", layout: false
+  else
+    erb :'routes/show'
+  end
 end
 
 

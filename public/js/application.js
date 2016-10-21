@@ -1,11 +1,11 @@
 $( document ).ready( function () {
-   // console.log( $.type );
-   // console.log( $( document ) );
+
    headerLinkListener( ".login_link" );
    headerLinkListener( ".register_link" );
    headerFormSubmitListener( "#register_new_user_form" );
    headerFormSubmitListener( "#login_user_form" );
    headerFormSubmitListener( "#logout_user_form" );
+   displayRoute();
 });
 
 
@@ -95,5 +95,20 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     }
   });
 }
+
+function displayRoute() {
+  $(".list").on("click", "a", function(event){
+     event.preventDefault();
+     var route = $(this).attr("href")
+     var listItem = $(this).parent()
+ 
+     $.ajax({
+       type: "get",
+       url: route
+     })
+       .done(function(routeData){
+         listItem.append(routeData);
+       });
+  });
 
 

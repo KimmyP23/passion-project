@@ -6,7 +6,7 @@
 		<p>No routes added</p>
 
 	<% else %>
-		<ul>
+		<ul class="list">
 	 	 	<% @user.routes.each do |route| %>
 	 			<li><a href="/routes/<%=route.id%>"><%= route.name %></a></li>
 	 	 	<%end%>
