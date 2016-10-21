@@ -16,15 +16,8 @@
 	</tr>
 </table>
 
-
-<!-- <p><%= @route.origin%></p>
-<p><%= @route.destination%></p>
-<p><%= @route.distance%></p>
-<p><%= @route.time%></p>
-<p><%= @route.comment%></p> -->
-
  <form action="/routes/<%= @route.id %>" method="POST">
  	<input type="hidden" name="_method" value="delete">
- 	<button id="delete-button" type="submit">Delete</button>
+ 	<button type="submit">Delete</button>
  </form>
 </div>
