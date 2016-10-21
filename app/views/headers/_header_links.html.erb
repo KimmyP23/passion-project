@@ -1,6 +1,6 @@
 <% if logged_in? %>
    <ul>
-      <li><a href="/users/<%= current_user.id%>"><%=current_user.username.upcase%></a></li>
+      <li><a href="/users/<%= current_user.id%>">Welcome, <%=current_user.username.upcase%></a></li>
       <li><a href="/routes/new">ADD ROUTE</a></li>
       <li><a href="/logout">LOGOUT</a></li>
       <li><a href="http://www.thesfmarathon.com/the-races/full-marathon/">SIGN UP FOR 2107 MARATHON</a></li>
